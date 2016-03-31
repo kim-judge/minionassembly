@@ -1,4 +1,4 @@
-/software/pathogen/external/apps/usr/local/quast-3.2/quast.py -o Quast -R manually_finished.fa --gage  --threads 4 --labels canu_6hr,canu_9hr,canu_12hr,canu_all,canu_pass,miniasm_6hr,miniasm_9hr,miniasm_12hr,miniasm_all,miniasm_pass,miniasm_pass_nanopolish,PBcR_pass,SPAdes3.6_pass_and_Illumina,Illumina_only canu_6hr.consensus.fasta canu_9hr.consensus.fasta canu_12hr.consensus.fasta canu_all.consensus.fasta canu_pass.consensus.fasta miniasm_6hr.contigs.fa miniasm_9hr.contigs.fa miniasm_12hr.contigs.fa miniasm_all.contigs.fa miniasm_pass.fa miniasm_pass_nanopolish.fa PBcR_pass.fa SPAdes3.6_pass_and_Illumina.fa illumina_only.fa
+/software/pathogen/external/apps/usr/local/quast-3.2/quast.py -o Quast.new -R manually_finished.fa --gage  --threads 4 --labels canu_6hr,canu_9hr,canu_12hr,canu_all,canu_pass,miniasm_6hr,miniasm_9hr,miniasm_12hr,miniasm_all,miniasm_pass,miniasm_pass_nanopolish,PBcR_pass,SPAdes3.6_pass_and_Illumina,Illumina_only canu_6hr.consensus.fasta canu_9hr.consensus.fasta canu_12hr.consensus.fasta canu_all.consensus.fasta canu_pass.consensus.fasta miniasm_6hr.contigs.fa miniasm_9hr.contigs.fa miniasm_12hr.contigs.fa miniasm_all.contigs.fa miniasm_pass.fa miniasm_pass_nanopolish.fa PBcR_pass.fa SPAdes3.6_pass_and_Illumina.fa illumina_only.fa
 
 Version: 3.2, build 26.11.2015 18:55
 
@@ -7,9 +7,9 @@ System information:
   Python version: 2.7.3
   CPUs number: 32
 
-Started: 2016-03-30 18:14:04
+Started: 2016-03-31 19:11:33
 
-Logging to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/quast.log
+Logging to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/quast.log
 
 Main parameters: 
   Threads: 4, minimum contig length: 500, ambiguity: one, threshold for extensive misassembly size: 1000
@@ -33,101 +33,103 @@ Contigs:
   13 SPAdes3.6_pass_and_Illumina.fa ==> SPAdes3.6_pass_and_Illumina
   14 illumina_only.fa ==> Illumina_only
 
-2016-03-30 18:14:17
+2016-03-31 19:11:46
 Running GAGE...
-  1  canu_6hr...
   2  canu_9hr...
-  1  Logging to files gage_canu_6hr.stdout and gage_canu_6hr.stderr...
   2  Logging to files gage_canu_9hr.stdout and gage_canu_9hr.stderr...
+  1  Logging to files gage_canu_6hr.stdout and gage_canu_6hr.stderr...
   3  canu_12hr...
+  3  Logging to files gage_canu_12hr.stdout and gage_canu_12hr.stderr...
   4  canu_all...
   4  Logging to files gage_canu_all.stdout and gage_canu_all.stderr...
-  1  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/canu_6hr.fasta \
-     Quast/gage/tmp 500 > Quast/gage/gage_canu_6hr.stdout 2> Quast/gage/gage_canu_6hr.stderr
   2  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/canu_9hr.fasta \
-     Quast/gage/tmp 500 > Quast/gage/gage_canu_9hr.stdout 2> Quast/gage/gage_canu_9hr.stderr
-  3  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/canu_12hr.fasta \
-     Quast/gage/tmp 500 > Quast/gage/gage_canu_12hr.stdout 2> Quast/gage/gage_canu_12hr.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/canu_9hr.fasta \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_canu_9hr.stdout 2> Quast.new/gage/gage_canu_9hr.stderr
+  1  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/canu_6hr.fasta \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_canu_6hr.stdout 2> Quast.new/gage/gage_canu_6hr.stderr
   4  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/canu_all.fasta \
-     Quast/gage/tmp 500 > Quast/gage/gage_canu_all.stdout 2> Quast/gage/gage_canu_all.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/canu_all.fasta \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_canu_all.stdout 2> Quast.new/gage/gage_canu_all.stderr
+  3  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/canu_12hr.fasta \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_canu_12hr.stdout 2> Quast.new/gage/gage_canu_12hr.stderr
   4  Done.
   5  canu_pass...
   5  Logging to files gage_canu_pass.stdout and gage_canu_pass.stderr...
   5  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/canu_pass.fasta \
-     Quast/gage/tmp 500 > Quast/gage/gage_canu_pass.stdout 2> Quast/gage/gage_canu_pass.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/canu_pass.fasta \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_canu_pass.stdout 2> Quast.new/gage/gage_canu_pass.stderr
   3  Done.
   6  miniasm_6hr...
   6  Logging to files gage_miniasm_6hr.stdout and gage_miniasm_6hr.stderr...
   6  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_6hr.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_miniasm_6hr.stdout 2> Quast/gage/gage_miniasm_6hr.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_6hr.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_miniasm_6hr.stdout 2> Quast.new/gage/gage_miniasm_6hr.stderr
   2  Done.
   7  miniasm_9hr...
   7  Logging to files gage_miniasm_9hr.stdout and gage_miniasm_9hr.stderr...
   7  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_9hr.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_miniasm_9hr.stdout 2> Quast/gage/gage_miniasm_9hr.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_9hr.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_miniasm_9hr.stdout 2> Quast.new/gage/gage_miniasm_9hr.stderr
   1  Done.
   8  miniasm_12hr...
   8  Logging to files gage_miniasm_12hr.stdout and gage_miniasm_12hr.stderr...
   8  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_12hr.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_miniasm_12hr.stdout 2> Quast/gage/gage_miniasm_12hr.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_12hr.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_miniasm_12hr.stdout 2> Quast.new/gage/gage_miniasm_12hr.stderr
   5  Done.
   9  miniasm_all...
   9  Logging to files gage_miniasm_all.stdout and gage_miniasm_all.stderr...
   9  sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_all.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_miniasm_all.stdout 2> Quast/gage/gage_miniasm_all.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_all.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_miniasm_all.stdout 2> Quast.new/gage/gage_miniasm_all.stderr
   6  Done.
   10 miniasm_pass...
   10 Logging to files gage_miniasm_pass.stdout and gage_miniasm_pass.stderr...
   10 sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_pass.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_miniasm_pass.stdout 2> Quast/gage/gage_miniasm_pass.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_pass.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_miniasm_pass.stdout 2> Quast.new/gage/gage_miniasm_pass.stderr
   7  Done.
   11 miniasm_pass_nanopolish...
   11 Logging to files gage_miniasm_pass_nanopolish.stdout and gage_miniasm_pass_nanopolish.stderr...
   11 sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_pass_nanopolish.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_miniasm_pass_nanopolish.stdout 2> Quast/gage/gage_miniasm_pass_nanopolish.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_pass_nanopolish.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_miniasm_pass_nanopolish.stdout 2> \
+     Quast.new/gage/gage_miniasm_pass_nanopolish.stderr
   8  Done.
   12 PBcR_pass...
   12 Logging to files gage_PBcR_pass.stdout and gage_PBcR_pass.stderr...
   12 sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/PBcR_pass.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_PBcR_pass.stdout 2> Quast/gage/gage_PBcR_pass.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/PBcR_pass.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_PBcR_pass.stdout 2> Quast.new/gage/gage_PBcR_pass.stderr
   9  Done.
   13 SPAdes3.6_pass_and_Illumina...
   13 Logging to files gage_SPAdes3.6_pass_and_Illumina.stdout and gage_SPAdes3.6_pass_and_Illumina.stderr...
   13 sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/SPAdes3.6_pass_and_Illumina.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_SPAdes3.6_pass_and_Illumina.stdout 2> Quast/gage/gage_SPAdes3.6_pass_and_Illumina.stderr
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/SPAdes3.6_pass_and_Illumina.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_SPAdes3.6_pass_and_Illumina.stdout \
+     2> Quast.new/gage/gage_SPAdes3.6_pass_and_Illumina.stderr
   11 Done.
   14 Illumina_only...
   14 Logging to files gage_Illumina_only.stdout and gage_Illumina_only.stderr...
   14 sh /software/pathogen/external/apps/usr/local/quast-3.2/libs/gage/getCorrectnessStats.sh \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/Illumina_only.fa \
-     Quast/gage/tmp 500 > Quast/gage/gage_Illumina_only.stdout 2> Quast/gage/gage_Illumina_only.stderr
-  10 Done.
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/Illumina_only.fa \
+     Quast.new/gage/tmp 500 > Quast.new/gage/gage_Illumina_only.stdout 2> Quast.new/gage/gage_Illumina_only.stderr
   12 Done.
+  10 Done.
   13 Done.
   14 Done.
   Creating total report...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/gage_report.txt, gage_report.tsv, and gage_report.tex
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/gage_report.txt, gage_report.tsv, and gage_report.tex
   Transposed version of total report...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/gage_transposed_report.txt, gage_transposed_report.tsv, and gage_transposed_report.tex
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/gage_transposed_report.txt, gage_transposed_report.tsv, and gage_transposed_report.tex
 Done.
 
-2016-03-30 18:15:43
+2016-03-31 19:13:12
 Running Basic statistics processor...
   Reference genome:
-    manually_finished.fa, Reference length = 5586413, Reference GC % = 54.31
+    manually_finished.fa, Reference length = 5590045, Reference GC % = 54.30
   Contig files: 
     1  canu_6hr
     2  canu_9hr
@@ -159,297 +161,300 @@ Running Basic statistics processor...
     13 SPAdes3.6_pass_and_Illumina, N50 = 5303011, L50 = 1, Total length = 5576147, GC % = 54.37, # N's per 100 kbp =  0.05
     14 Illumina_only, N50 = 153115, L50 = 10, Total length = 5453647, GC % = 54.40, # N's per 100 kbp =  134.42
   Drawing Nx plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/basic_stats/Nx_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/basic_stats/Nx_plot.pdf
   Drawing NGx plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/basic_stats/NGx_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/basic_stats/NGx_plot.pdf
   Drawing cumulative plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/basic_stats/cumulative_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/basic_stats/cumulative_plot.pdf
   Drawing GC content plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/basic_stats/GC_content_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/basic_stats/GC_content_plot.pdf
 Done.
 
-2016-03-30 18:15:56
+2016-03-31 19:13:26
 Running Contig analyzer...
   1  canu_6hr
   2  canu_9hr
   3  canu_12hr
   4  canu_all
-  4  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_canu_all.stdout and contigs_report_canu_all.stderr...
-  2  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_canu_9hr.stdout and contigs_report_canu_9hr.stderr...
-  3  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_canu_12hr.stdout and contigs_report_canu_12hr.stderr...
+  1  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_canu_6hr.stdout and contigs_report_canu_6hr.stderr...
+  2  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_canu_9hr.stdout and contigs_report_canu_9hr.stderr...
   1  Running Nucmer
+  3  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_canu_12hr.stdout and contigs_report_canu_12hr.stderr...
   2  Running Nucmer
   3  Running Nucmer
   4  Running Nucmer
   1  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/canu_6hr Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/canu_6hr.fasta >> Quast/contigs_reports/contigs_report_canu_6hr.stdout \
-     2>> Quast/contigs_reports/contigs_report_canu_6hr.stderr
-  4  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/canu_all Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/canu_all.fasta >> Quast/contigs_reports/contigs_report_canu_all.stdout \
-     2>> Quast/contigs_reports/contigs_report_canu_all.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/canu_6hr Quast.new/quast_corrected_input/manually_finished.fa \
+     Quast.new/quast_corrected_input/canu_6hr.fasta >> Quast.new/contigs_reports/contigs_report_canu_6hr.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_canu_6hr.stderr
   2  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/canu_9hr Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/canu_9hr.fasta >> Quast/contigs_reports/contigs_report_canu_9hr.stdout \
-     2>> Quast/contigs_reports/contigs_report_canu_9hr.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/canu_9hr Quast.new/quast_corrected_input/manually_finished.fa \
+     Quast.new/quast_corrected_input/canu_9hr.fasta >> Quast.new/contigs_reports/contigs_report_canu_9hr.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_canu_9hr.stderr
+  4  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/canu_all Quast.new/quast_corrected_input/manually_finished.fa \
+     Quast.new/quast_corrected_input/canu_all.fasta >> Quast.new/contigs_reports/contigs_report_canu_all.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_canu_all.stderr
   3  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/canu_12hr Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/canu_12hr.fasta >> Quast/contigs_reports/contigs_report_canu_12hr.stdout \
-     2>> Quast/contigs_reports/contigs_report_canu_12hr.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/canu_12hr Quast.new/quast_corrected_input/manually_finished.fa \
+     Quast.new/quast_corrected_input/canu_12hr.fasta >> Quast.new/contigs_reports/contigs_report_canu_12hr.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_canu_12hr.stderr
   4  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/canu_all.delta > Quast/contigs_reports/nucmer_output/canu_all.fdelta \
-     2> Quast/contigs_reports/contigs_report_canu_all.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/canu_all.delta > Quast.new/contigs_reports/nucmer_output/canu_all.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_canu_all.stderr
   4  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/canu_all.delta > Quast/contigs_reports/nucmer_output/canu_all.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_canu_all.stderr
+     Quast.new/contigs_reports/nucmer_output/canu_all.delta > Quast.new/contigs_reports/nucmer_output/canu_all.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_canu_all.stderr
   4  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/canu_all.delta < Quast/contigs_reports/nucmer_output/canu_all.coords.headless \
-     > Quast/contigs_reports/nucmer_output/canu_all.all_snps 2> Quast/contigs_reports/contigs_report_canu_all.stderr
+     -S -T -H Quast.new/contigs_reports/nucmer_output/canu_all.delta < Quast.new/contigs_reports/nucmer_output/canu_all.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/canu_all.all_snps 2> Quast.new/contigs_reports/contigs_report_canu_all.stderr
   2  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/canu_9hr.delta > Quast/contigs_reports/nucmer_output/canu_9hr.fdelta \
-     2> Quast/contigs_reports/contigs_report_canu_9hr.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/canu_9hr.delta > Quast.new/contigs_reports/nucmer_output/canu_9hr.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_canu_9hr.stderr
   2  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/canu_9hr.delta > Quast/contigs_reports/nucmer_output/canu_9hr.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_canu_9hr.stderr
-  2  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/canu_9hr.delta < Quast/contigs_reports/nucmer_output/canu_9hr.coords.headless \
-     > Quast/contigs_reports/nucmer_output/canu_9hr.all_snps 2> Quast/contigs_reports/contigs_report_canu_9hr.stderr
+     Quast.new/contigs_reports/nucmer_output/canu_9hr.delta > Quast.new/contigs_reports/nucmer_output/canu_9hr.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_canu_9hr.stderr
   3  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/canu_12hr.delta > Quast/contigs_reports/nucmer_output/canu_12hr.fdelta \
-     2> Quast/contigs_reports/contigs_report_canu_12hr.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/canu_12hr.delta > Quast.new/contigs_reports/nucmer_output/canu_12hr.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_canu_12hr.stderr
+  2  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
+     -S -T -H Quast.new/contigs_reports/nucmer_output/canu_9hr.delta < Quast.new/contigs_reports/nucmer_output/canu_9hr.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/canu_9hr.all_snps 2> Quast.new/contigs_reports/contigs_report_canu_9hr.stderr
   3  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/canu_12hr.delta > Quast/contigs_reports/nucmer_output/canu_12hr.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_canu_12hr.stderr
+     Quast.new/contigs_reports/nucmer_output/canu_12hr.delta > Quast.new/contigs_reports/nucmer_output/canu_12hr.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_canu_12hr.stderr
   3  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/canu_12hr.delta < Quast/contigs_reports/nucmer_output/canu_12hr.coords.headless \
-     > Quast/contigs_reports/nucmer_output/canu_12hr.all_snps 2> Quast/contigs_reports/contigs_report_canu_12hr.stderr
+     -S -T -H Quast.new/contigs_reports/nucmer_output/canu_12hr.delta < Quast.new/contigs_reports/nucmer_output/canu_12hr.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/canu_12hr.all_snps 2> Quast.new/contigs_reports/contigs_report_canu_12hr.stderr
   1  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/canu_6hr.delta > Quast/contigs_reports/nucmer_output/canu_6hr.fdelta \
-     2> Quast/contigs_reports/contigs_report_canu_6hr.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/canu_6hr.delta > Quast.new/contigs_reports/nucmer_output/canu_6hr.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_canu_6hr.stderr
   1  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/canu_6hr.delta > Quast/contigs_reports/nucmer_output/canu_6hr.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_canu_6hr.stderr
+     Quast.new/contigs_reports/nucmer_output/canu_6hr.delta > Quast.new/contigs_reports/nucmer_output/canu_6hr.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_canu_6hr.stderr
   1  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/canu_6hr.delta < Quast/contigs_reports/nucmer_output/canu_6hr.coords.headless \
-     > Quast/contigs_reports/nucmer_output/canu_6hr.all_snps 2> Quast/contigs_reports/contigs_report_canu_6hr.stderr
-  4  Alignments: Quast/contigs_reports/alignments_canu_all.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/canu_6hr.delta < Quast.new/contigs_reports/nucmer_output/canu_6hr.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/canu_6hr.all_snps 2> Quast.new/contigs_reports/contigs_report_canu_6hr.stderr
+  4  Alignments: Quast.new/contigs_reports/alignments_canu_all.tsv
   4  Analysis is finished.
 
   5  canu_pass
-  5  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_canu_pass.stdout and contigs_report_canu_pass.stderr...
+  5  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_canu_pass.stdout and contigs_report_canu_pass.stderr...
   5  Running Nucmer
   5  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/canu_pass Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/canu_pass.fasta >> Quast/contigs_reports/contigs_report_canu_pass.stdout \
-     2>> Quast/contigs_reports/contigs_report_canu_pass.stderr
-  3  Alignments: Quast/contigs_reports/alignments_canu_12hr.tsv
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/canu_pass Quast.new/quast_corrected_input/manually_finished.fa \
+     Quast.new/quast_corrected_input/canu_pass.fasta >> Quast.new/contigs_reports/contigs_report_canu_pass.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_canu_pass.stderr
+  3  Alignments: Quast.new/contigs_reports/alignments_canu_12hr.tsv
   3  Analysis is finished.
 
+  2  Alignments: Quast.new/contigs_reports/alignments_canu_9hr.tsv
   6  miniasm_6hr
-  6  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_miniasm_6hr.stdout and contigs_report_miniasm_6hr.stderr...
-  6  Running Nucmer
-  6  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/miniasm_6hr Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/miniasm_6hr.fa >> Quast/contigs_reports/contigs_report_miniasm_6hr.stdout \
-     2>> Quast/contigs_reports/contigs_report_miniasm_6hr.stderr
-  2  Alignments: Quast/contigs_reports/alignments_canu_9hr.tsv
   2  Analysis is finished.
 
+  6  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_miniasm_6hr.stdout and contigs_report_miniasm_6hr.stderr...
+  6  Running Nucmer
+  6  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/miniasm_6hr \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_6hr.fa \
+     >> Quast.new/contigs_reports/contigs_report_miniasm_6hr.stdout 2>> Quast.new/contigs_reports/contigs_report_miniasm_6hr.stderr
   7  miniasm_9hr
-  7  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_miniasm_9hr.stdout and contigs_report_miniasm_9hr.stderr...
+  7  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_miniasm_9hr.stdout and contigs_report_miniasm_9hr.stderr...
   7  Running Nucmer
   7  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/miniasm_9hr Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/miniasm_9hr.fa >> Quast/contigs_reports/contigs_report_miniasm_9hr.stdout \
-     2>> Quast/contigs_reports/contigs_report_miniasm_9hr.stderr
-  1  Alignments: Quast/contigs_reports/alignments_canu_6hr.tsv
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/miniasm_9hr \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_9hr.fa \
+     >> Quast.new/contigs_reports/contigs_report_miniasm_9hr.stdout 2>> Quast.new/contigs_reports/contigs_report_miniasm_9hr.stderr
+  1  Alignments: Quast.new/contigs_reports/alignments_canu_6hr.tsv
   1  Analysis is finished.
 
   8  miniasm_12hr
-  8  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_miniasm_12hr.stdout and contigs_report_miniasm_12hr.stderr...
+  8  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_miniasm_12hr.stdout and contigs_report_miniasm_12hr.stderr...
   8  Running Nucmer
   8  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/miniasm_12hr Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/miniasm_12hr.fa >> Quast/contigs_reports/contigs_report_miniasm_12hr.stdout \
-     2>> Quast/contigs_reports/contigs_report_miniasm_12hr.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/miniasm_12hr \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_12hr.fa \
+     >> Quast.new/contigs_reports/contigs_report_miniasm_12hr.stdout 2>> Quast.new/contigs_reports/contigs_report_miniasm_12hr.stderr
   5  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/canu_pass.delta > Quast/contigs_reports/nucmer_output/canu_pass.fdelta \
-     2> Quast/contigs_reports/contigs_report_canu_pass.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/canu_pass.delta > Quast.new/contigs_reports/nucmer_output/canu_pass.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_canu_pass.stderr
   5  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/canu_pass.delta > Quast/contigs_reports/nucmer_output/canu_pass.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_canu_pass.stderr
+     Quast.new/contigs_reports/nucmer_output/canu_pass.delta > Quast.new/contigs_reports/nucmer_output/canu_pass.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_canu_pass.stderr
   5  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/canu_pass.delta < Quast/contigs_reports/nucmer_output/canu_pass.coords.headless \
-     > Quast/contigs_reports/nucmer_output/canu_pass.all_snps 2> Quast/contigs_reports/contigs_report_canu_pass.stderr
-  5  Alignments: Quast/contigs_reports/alignments_canu_pass.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/canu_pass.delta < Quast.new/contigs_reports/nucmer_output/canu_pass.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/canu_pass.all_snps 2> Quast.new/contigs_reports/contigs_report_canu_pass.stderr
+  5  Alignments: Quast.new/contigs_reports/alignments_canu_pass.tsv
   5  Analysis is finished.
 
   9  miniasm_all
-  9  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_miniasm_all.stdout and contigs_report_miniasm_all.stderr...
+  9  Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_miniasm_all.stdout and contigs_report_miniasm_all.stderr...
   9  Running Nucmer
   9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/miniasm_all Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/miniasm_all.fa >> Quast/contigs_reports/contigs_report_miniasm_all.stdout \
-     2>> Quast/contigs_reports/contigs_report_miniasm_all.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/miniasm_all \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_all.fa \
+     >> Quast.new/contigs_reports/contigs_report_miniasm_all.stdout 2>> Quast.new/contigs_reports/contigs_report_miniasm_all.stderr
   6  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/miniasm_6hr.delta > Quast/contigs_reports/nucmer_output/miniasm_6hr.fdelta \
-     2> Quast/contigs_reports/contigs_report_miniasm_6hr.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/miniasm_6hr.delta > Quast.new/contigs_reports/nucmer_output/miniasm_6hr.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_6hr.stderr
   6  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/miniasm_6hr.delta > Quast/contigs_reports/nucmer_output/miniasm_6hr.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_miniasm_6hr.stderr
+     Quast.new/contigs_reports/nucmer_output/miniasm_6hr.delta > Quast.new/contigs_reports/nucmer_output/miniasm_6hr.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_6hr.stderr
   6  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/miniasm_6hr.delta < Quast/contigs_reports/nucmer_output/miniasm_6hr.coords.headless \
-     > Quast/contigs_reports/nucmer_output/miniasm_6hr.all_snps 2> Quast/contigs_reports/contigs_report_miniasm_6hr.stderr
-  6  Alignments: Quast/contigs_reports/alignments_miniasm_6hr.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/miniasm_6hr.delta < Quast.new/contigs_reports/nucmer_output/miniasm_6hr.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_6hr.all_snps 2> Quast.new/contigs_reports/contigs_report_miniasm_6hr.stderr
+  6  Alignments: Quast.new/contigs_reports/alignments_miniasm_6hr.tsv
   6  Analysis is finished.
 
   10 miniasm_pass
-  10 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_miniasm_pass.stdout and contigs_report_miniasm_pass.stderr...
+  10 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_miniasm_pass.stdout and contigs_report_miniasm_pass.stderr...
   10 Running Nucmer
   10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/miniasm_pass Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/miniasm_pass.fa >> Quast/contigs_reports/contigs_report_miniasm_pass.stdout \
-     2>> Quast/contigs_reports/contigs_report_miniasm_pass.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/miniasm_pass \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_pass.fa \
+     >> Quast.new/contigs_reports/contigs_report_miniasm_pass.stdout 2>> Quast.new/contigs_reports/contigs_report_miniasm_pass.stderr
   7  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/miniasm_9hr.delta > Quast/contigs_reports/nucmer_output/miniasm_9hr.fdelta \
-     2> Quast/contigs_reports/contigs_report_miniasm_9hr.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/miniasm_9hr.delta > Quast.new/contigs_reports/nucmer_output/miniasm_9hr.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_9hr.stderr
   7  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/miniasm_9hr.delta > Quast/contigs_reports/nucmer_output/miniasm_9hr.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_miniasm_9hr.stderr
+     Quast.new/contigs_reports/nucmer_output/miniasm_9hr.delta > Quast.new/contigs_reports/nucmer_output/miniasm_9hr.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_9hr.stderr
   7  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/miniasm_9hr.delta < Quast/contigs_reports/nucmer_output/miniasm_9hr.coords.headless \
-     > Quast/contigs_reports/nucmer_output/miniasm_9hr.all_snps 2> Quast/contigs_reports/contigs_report_miniasm_9hr.stderr
-  7  Alignments: Quast/contigs_reports/alignments_miniasm_9hr.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/miniasm_9hr.delta < Quast.new/contigs_reports/nucmer_output/miniasm_9hr.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_9hr.all_snps 2> Quast.new/contigs_reports/contigs_report_miniasm_9hr.stderr
+  7  Alignments: Quast.new/contigs_reports/alignments_miniasm_9hr.tsv
   7  Analysis is finished.
 
   11 miniasm_pass_nanopolish
-  11 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_miniasm_pass_nanopolish.stdout and contigs_report_miniasm_pass_nanopolish.stderr...
+  11 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_miniasm_pass_nanopolish.stdout and contigs_report_miniasm_pass_nanopolish.stderr...
   11 Running Nucmer
   11 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/miniasm_pass_nanopolish.fa \
-     >> Quast/contigs_reports/contigs_report_miniasm_pass_nanopolish.stdout 2>> Quast/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/miniasm_pass_nanopolish.fa \
+     >> Quast.new/contigs_reports/contigs_report_miniasm_pass_nanopolish.stdout 2>> \
+     Quast.new/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
   8  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/miniasm_12hr.delta > Quast/contigs_reports/nucmer_output/miniasm_12hr.fdelta \
-     2> Quast/contigs_reports/contigs_report_miniasm_12hr.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/miniasm_12hr.delta > Quast.new/contigs_reports/nucmer_output/miniasm_12hr.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_12hr.stderr
   8  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/miniasm_12hr.delta > Quast/contigs_reports/nucmer_output/miniasm_12hr.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_miniasm_12hr.stderr
+     Quast.new/contigs_reports/nucmer_output/miniasm_12hr.delta > Quast.new/contigs_reports/nucmer_output/miniasm_12hr.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_12hr.stderr
   8  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/miniasm_12hr.delta < Quast/contigs_reports/nucmer_output/miniasm_12hr.coords.headless \
-     > Quast/contigs_reports/nucmer_output/miniasm_12hr.all_snps 2> Quast/contigs_reports/contigs_report_miniasm_12hr.stderr
-  8  Alignments: Quast/contigs_reports/alignments_miniasm_12hr.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/miniasm_12hr.delta < Quast.new/contigs_reports/nucmer_output/miniasm_12hr.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_12hr.all_snps 2> Quast.new/contigs_reports/contigs_report_miniasm_12hr.stderr
+  8  Alignments: Quast.new/contigs_reports/alignments_miniasm_12hr.tsv
   8  Analysis is finished.
 
   12 PBcR_pass
-  12 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_PBcR_pass.stdout and contigs_report_PBcR_pass.stderr...
+  12 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_PBcR_pass.stdout and contigs_report_PBcR_pass.stderr...
   12 Running Nucmer
   12 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/PBcR_pass Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/PBcR_pass.fa >> Quast/contigs_reports/contigs_report_PBcR_pass.stdout \
-     2>> Quast/contigs_reports/contigs_report_PBcR_pass.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/PBcR_pass Quast.new/quast_corrected_input/manually_finished.fa \
+     Quast.new/quast_corrected_input/PBcR_pass.fa >> Quast.new/contigs_reports/contigs_report_PBcR_pass.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_PBcR_pass.stderr
   11 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.delta \
-     > Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.fdelta 2> Quast/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.delta \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.fdelta 2> Quast.new/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
   11 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.delta > Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
+     Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.delta > Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
   11 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.delta < \
-     Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.coords.headless > \
-     Quast/contigs_reports/nucmer_output/miniasm_pass_nanopolish.all_snps 2> Quast/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
-  9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/miniasm_all.delta > Quast/contigs_reports/nucmer_output/miniasm_all.fdelta \
-     2> Quast/contigs_reports/contigs_report_miniasm_all.stderr
-  9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/miniasm_all.delta > Quast/contigs_reports/nucmer_output/miniasm_all.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_miniasm_all.stderr
-  9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/miniasm_all.delta < Quast/contigs_reports/nucmer_output/miniasm_all.coords.headless \
-     > Quast/contigs_reports/nucmer_output/miniasm_all.all_snps 2> Quast/contigs_reports/contigs_report_miniasm_all.stderr
-  9  Alignments: Quast/contigs_reports/alignments_miniasm_all.tsv
-  9  Analysis is finished.
-
-  13 SPAdes3.6_pass_and_Illumina
-  13 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stdout and contigs_report_SPAdes3.6_pass_and_Illumina.stderr...
-  13 Running Nucmer
-  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina \
-     Quast/quast_corrected_input/manually_finished.fa Quast/quast_corrected_input/SPAdes3.6_pass_and_Illumina.fa \
-     >> Quast/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stdout 2>> \
-     Quast/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
-  11 Alignments: Quast/contigs_reports/alignments_miniasm_pass_nanopolish.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.delta \
+     < Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_pass_nanopolish.all_snps 2> \
+     Quast.new/contigs_reports/contigs_report_miniasm_pass_nanopolish.stderr
+  11 Alignments: Quast.new/contigs_reports/alignments_miniasm_pass_nanopolish.tsv
   11 Analysis is finished.
 
+  13 SPAdes3.6_pass_and_Illumina
+  13 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stdout and contigs_report_SPAdes3.6_pass_and_Illumina.stderr...
+  13 Running Nucmer
+  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/SPAdes3.6_pass_and_Illumina.fa \
+     >> Quast.new/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stdout \
+     2>> Quast.new/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
+  9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/miniasm_all.delta > Quast.new/contigs_reports/nucmer_output/miniasm_all.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_all.stderr
+  9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
+     Quast.new/contigs_reports/nucmer_output/miniasm_all.delta > Quast.new/contigs_reports/nucmer_output/miniasm_all.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_all.stderr
+  9  /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
+     -S -T -H Quast.new/contigs_reports/nucmer_output/miniasm_all.delta < Quast.new/contigs_reports/nucmer_output/miniasm_all.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_all.all_snps 2> Quast.new/contigs_reports/contigs_report_miniasm_all.stderr
+  9  Alignments: Quast.new/contigs_reports/alignments_miniasm_all.tsv
+  9  Analysis is finished.
+
   14 Illumina_only
-  14 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/contigs_report_Illumina_only.stdout and contigs_report_Illumina_only.stderr...
+  14 Logging to files /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/contigs_report_Illumina_only.stdout and contigs_report_Illumina_only.stderr...
   14 Running Nucmer
   14 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/nucmer \
-     -c 65 -l 65 --maxmatch -p Quast/contigs_reports/nucmer_output/Illumina_only Quast/quast_corrected_input/manually_finished.fa \
-     Quast/quast_corrected_input/Illumina_only.fa >> Quast/contigs_reports/contigs_report_Illumina_only.stdout \
-     2>> Quast/contigs_reports/contigs_report_Illumina_only.stderr
+     -c 65 -l 65 --maxmatch -p Quast.new/contigs_reports/nucmer_output/Illumina_only \
+     Quast.new/quast_corrected_input/manually_finished.fa Quast.new/quast_corrected_input/Illumina_only.fa \
+     >> Quast.new/contigs_reports/contigs_report_Illumina_only.stdout 2>> Quast.new/contigs_reports/contigs_report_Illumina_only.stderr
   12 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/PBcR_pass.delta > Quast/contigs_reports/nucmer_output/PBcR_pass.fdelta \
-     2> Quast/contigs_reports/contigs_report_PBcR_pass.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/PBcR_pass.delta > Quast.new/contigs_reports/nucmer_output/PBcR_pass.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_PBcR_pass.stderr
   12 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/PBcR_pass.delta > Quast/contigs_reports/nucmer_output/PBcR_pass.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_PBcR_pass.stderr
+     Quast.new/contigs_reports/nucmer_output/PBcR_pass.delta > Quast.new/contigs_reports/nucmer_output/PBcR_pass.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_PBcR_pass.stderr
   12 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/PBcR_pass.delta < Quast/contigs_reports/nucmer_output/PBcR_pass.coords.headless \
-     > Quast/contigs_reports/nucmer_output/PBcR_pass.all_snps 2> Quast/contigs_reports/contigs_report_PBcR_pass.stderr
-  12 Alignments: Quast/contigs_reports/alignments_PBcR_pass.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/PBcR_pass.delta < Quast.new/contigs_reports/nucmer_output/PBcR_pass.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/PBcR_pass.all_snps 2> Quast.new/contigs_reports/contigs_report_PBcR_pass.stderr
+  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.delta \
+     > Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
+  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
+     Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.delta > Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
+  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
+     -S -T -H Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.delta \
+     < Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.all_snps \
+     2> Quast.new/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
+  12 Alignments: Quast.new/contigs_reports/alignments_PBcR_pass.tsv
   12 Analysis is finished.
 
-  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.delta \
-     > Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.fdelta 2> Quast/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
-  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.delta > Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
-  13 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.delta \
-     < Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.coords.headless \
-     > Quast/contigs_reports/nucmer_output/SPAdes3.6_pass_and_Illumina.all_snps 2> \
-     Quast/contigs_reports/contigs_report_SPAdes3.6_pass_and_Illumina.stderr
   14 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/Illumina_only.delta > Quast/contigs_reports/nucmer_output/Illumina_only.fdelta \
-     2> Quast/contigs_reports/contigs_report_Illumina_only.stderr
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/Illumina_only.delta > Quast.new/contigs_reports/nucmer_output/Illumina_only.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_Illumina_only.stderr
   14 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/Illumina_only.delta > Quast/contigs_reports/nucmer_output/Illumina_only.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_Illumina_only.stderr
+     Quast.new/contigs_reports/nucmer_output/Illumina_only.delta > Quast.new/contigs_reports/nucmer_output/Illumina_only.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_Illumina_only.stderr
   14 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/Illumina_only.delta < Quast/contigs_reports/nucmer_output/Illumina_only.coords.headless \
-     > Quast/contigs_reports/nucmer_output/Illumina_only.all_snps 2> Quast/contigs_reports/contigs_report_Illumina_only.stderr
-  13 Alignments: Quast/contigs_reports/alignments_SPAdes3.6_pass_and_Illumina.tsv
+     -S -T -H Quast.new/contigs_reports/nucmer_output/Illumina_only.delta < Quast.new/contigs_reports/nucmer_output/Illumina_only.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/Illumina_only.all_snps 2> Quast.new/contigs_reports/contigs_report_Illumina_only.stderr
+  13 Alignments: Quast.new/contigs_reports/alignments_SPAdes3.6_pass_and_Illumina.tsv
   13 Analysis is finished.
 
-  14 Alignments: Quast/contigs_reports/alignments_Illumina_only.tsv
+  10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
+     -i 95 -l 0 Quast.new/contigs_reports/nucmer_output/miniasm_pass.delta > Quast.new/contigs_reports/nucmer_output/miniasm_pass.fdelta \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_pass.stderr
+  10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
+     Quast.new/contigs_reports/nucmer_output/miniasm_pass.delta > Quast.new/contigs_reports/nucmer_output/miniasm_pass.coords_tmp \
+     2> Quast.new/contigs_reports/contigs_report_miniasm_pass.stderr
+  10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
+     -S -T -H Quast.new/contigs_reports/nucmer_output/miniasm_pass.delta < Quast.new/contigs_reports/nucmer_output/miniasm_pass.coords.headless \
+     > Quast.new/contigs_reports/nucmer_output/miniasm_pass.all_snps 2> Quast.new/contigs_reports/contigs_report_miniasm_pass.stderr
+  14 Alignments: Quast.new/contigs_reports/alignments_Illumina_only.tsv
   14 Analysis is finished.
 
-  10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/delta-filter \
-     -i 95 -l 0 Quast/contigs_reports/nucmer_output/miniasm_pass.delta > Quast/contigs_reports/nucmer_output/miniasm_pass.fdelta \
-     2> Quast/contigs_reports/contigs_report_miniasm_pass.stderr
-  10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-coords \
-     Quast/contigs_reports/nucmer_output/miniasm_pass.delta > Quast/contigs_reports/nucmer_output/miniasm_pass.coords_tmp \
-     2> Quast/contigs_reports/contigs_report_miniasm_pass.stderr
-  10 /software/pathogen/external/apps/usr/local/quast-3.2/libs/MUMmer3.23-linux/show-snps \
-     -S -T -H Quast/contigs_reports/nucmer_output/miniasm_pass.delta < Quast/contigs_reports/nucmer_output/miniasm_pass.coords.headless \
-     > Quast/contigs_reports/nucmer_output/miniasm_pass.all_snps 2> Quast/contigs_reports/contigs_report_miniasm_pass.stderr
-  10 Alignments: Quast/contigs_reports/alignments_miniasm_pass.tsv
+  10 Alignments: Quast.new/contigs_reports/alignments_miniasm_pass.tsv
   10 Analysis is finished.
 
   Creating total report...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
   Transposed version of total report...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
   Creating total report...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
   Drawing misassemblies by types plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/contigs_reports/misassemblies_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/contigs_reports/misassemblies_plot.pdf
 Done.
 
-2016-03-30 18:19:07
+2016-03-31 19:16:24
 Running NA-NGA calculation...
   1  canu_6hr, Largest alignment = 550317, NA50 = 129306, NGA50 = 124783, LA50 = 12, LGA50 = 13
   2  canu_9hr, Largest alignment = 2777588, NA50 = 2777588, NGA50 = 1456360, LA50 = 1, LGA50 = 2
@@ -466,36 +471,37 @@ Running NA-NGA calculation...
   13 SPAdes3.6_pass_and_Illumina, Largest alignment = 2125655, NA50 = 1476211, NGA50 = 1476211, LA50 = 2, LGA50 = 2
   14 Illumina_only, Largest alignment = 372132, NA50 = 152838, NGA50 = 131571, LA50 = 11, LGA50 = 12
   Drawing cumulative plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/aligned_stats/cumulative_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/aligned_stats/cumulative_plot.pdf
   Drawing NAx plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/aligned_stats/NAx_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/aligned_stats/NAx_plot.pdf
   Drawing NGAx plot...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/aligned_stats/NGAx_plot.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/aligned_stats/NGAx_plot.pdf
 Done.
 
-2016-03-30 18:19:11
+2016-03-31 19:16:29
 Running Genome analyzer...
   NOTICE: No file with genes provided. Use the -G option if you want to specify it.
   NOTICE: No file with operons provided. Use the -O option if you want to specify it.
+  1  canu_6hr
   2  canu_9hr
-  4  canu_all
+  3  canu_12hr
   4  Analysis is finished.
-  1  Analysis is finished.
-  2  Analysis is finished.
-  3  Analysis is finished.
   5  canu_pass
+  1  Analysis is finished.
   6  miniasm_6hr
+  2  Analysis is finished.
   7  miniasm_9hr
+  3  Analysis is finished.
   8  miniasm_12hr
   6  Analysis is finished.
-  8  Analysis is finished.
   9  miniasm_all
-  10 miniasm_pass
   7  Analysis is finished.
+  10 miniasm_pass
+  8  Analysis is finished.
   11 miniasm_pass_nanopolish
   9  Analysis is finished.
-  10 Analysis is finished.
   12 PBcR_pass
+  10 Analysis is finished.
   13 SPAdes3.6_pass_and_Illumina
   5  Analysis is finished.
   14 Illumina_only
@@ -504,29 +510,29 @@ Running Genome analyzer...
   13 Analysis is finished.
   14 Analysis is finished.
   Drawing Genome fraction, % histogram...
-    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/genome_stats/genome_fraction_histogram.pdf
+    saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/genome_stats/genome_fraction_histogram.pdf
 Done.
 
 NOTICE: Genes are not predicted by default. Use --gene-finding option to enable it.
 
-2016-03-30 18:19:25
+2016-03-31 19:16:43
 Drawing large plots...
 This may take a while: press Ctrl-C to skip this step..
   1 of 2: Creating contig alignment plot...
   2 of 2: Creating PDF with all tables and plots...
 Done
 
-2016-03-30 18:19:38
+2016-03-31 19:16:57
 RESULTS:
-  Text versions of total report are saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/report.txt, report.tsv, and report.tex
-  Text versions of transposed total report are saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
-  HTML version (interactive tables and plots) saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/report.html
-  PDF version (tables and plots) saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/report.pdf
-  Contig alignment plot: /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/alignment.svg
-  Log saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast/quast.log
+  Text versions of total report are saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/report.html
+  PDF version (tables and plots) saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/report.pdf
+  Contig alignment plot: /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/alignment.svg
+  Log saved to /lustre/scratch108/parasites/mh12/Tickets/516174-ont-assemblies/annet/Quast.new/quast.log
 
-Finished: 2016-03-30 18:19:38
-Elapsed time: 0:05:33.797756
+Finished: 2016-03-31 19:16:57
+Elapsed time: 0:05:23.797225
 NOTICEs: 3; WARNINGs: 0; non-fatal ERRORs: 0
 
 Thank you for using QUAST!
