@@ -1,2 +1,2 @@
-# annet
-Test uploading assemblies to github
+# MinION Assemblies
+MinION assemblies and QUAST output for Enterobacter kobei 
